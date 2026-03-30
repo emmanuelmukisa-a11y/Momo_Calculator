@@ -41,7 +41,7 @@ fun BrokenInput() {
         value = amount,
         onValueChange= { amount = it },
         label= {
-            Text(stringResource(id =R.string.enter_amount))
+            Text(stringResource(R.string.enter_amount))
         }
     )
 }
@@ -55,7 +55,7 @@ fun InternalStateInput(){
         onValueChange = { amount = it },
         label = {
             Text(
-                stringResource(id = R.string.enter_amount )
+                stringResource(R.string.enter_amount)
             )
         }
     )
@@ -106,5 +106,13 @@ fun MomoCalcPreview() {
 fun BrokenInputPreview() {
     MaterialTheme() {
         BrokenInput()
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun InternalStateInputPreview() {
+    MaterialTheme() {
+        InternalStateInput()
     }
 }
