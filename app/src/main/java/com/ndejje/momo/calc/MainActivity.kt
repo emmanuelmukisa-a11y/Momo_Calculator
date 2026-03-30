@@ -62,7 +62,7 @@ fun InternalStateInput(){
 
 }
 
-/*
+
 @Composable
 fun HoistedAmountInput(
     amount: String,
@@ -89,7 +89,7 @@ fun HoistedAmountInput(
 
 
 
- */
+
 @Preview(showBackground = true)
 @Composable
 fun MomoCalcPreview() {
