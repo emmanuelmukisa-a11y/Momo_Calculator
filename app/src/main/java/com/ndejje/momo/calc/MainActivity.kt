@@ -92,15 +92,17 @@ fun HoistedAmountInput(
 
 @Preview(showBackground = true)
 @Composable
-fun MomoCalcPreview() {
-    Momo_CalculatorTheme {
-        MaterialTheme(){
-            BrokenInput()
+fun PreviewEmptyInput() {
+    MaterialTheme(){
+            HoistedAmountInput("", {})
         }
 
     }
-}
 
+
+
+
+/*
 @Preview(showBackground = true)
 @Composable
 fun BrokenInputPreview() {
@@ -116,3 +118,5 @@ fun InternalStateInputPreview() {
         InternalStateInput()
     }
 }
+
+*/
