@@ -99,6 +99,22 @@ fun PreviewEmptyInput() {
 
     }
 
+@Preview(showBackground = true)
+@Composable
+fun PreviewFilled() {
+    MaterialTheme(){
+        HoistedAmountInput("100,000,000", {})
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun PreviewError() {
+    MaterialTheme(){
+        HoistedAmountInput("abc", {}, true)
+    }
+}
+
 
 
 
