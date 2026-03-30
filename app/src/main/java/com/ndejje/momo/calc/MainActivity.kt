@@ -87,6 +87,9 @@ fun HoistedAmountInput(
   )
 }
 
+
+
+ */
 @Preview(showBackground = true)
 @Composable
 fun MomoCalcPreview() {
@@ -98,4 +101,10 @@ fun MomoCalcPreview() {
     }
 }
 
-*/
+@Preview(showBackground = true)
+@Composable
+fun BrokenInputPreview() {
+    MaterialTheme() {
+        BrokenInput()
+    }
+}
