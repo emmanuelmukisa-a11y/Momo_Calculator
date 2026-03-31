@@ -38,7 +38,7 @@ fun MoMoAppTheme(
     MaterialTheme(
         colorScheme = LightColorScheme,
         typography = MomoTypography,
-        shapes = MoMoShapes,
+        shapes = MomoShapes,
         content = content
     )
 

@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -178,6 +179,22 @@ fun MoMoTopBar() {
     )
 }
 
+@Composable
+fun MoMoAppTheme(
+    darkTheme: Boolean = isSystemInDarkTheme(),
+    content: @Composable () -> Unit
+){
+    val colorScheme = if(darkTheme) DarkColorScheme else LightColorScheme
+
+    MaterialTheme(
+        colorScheme = colorScheme,
+        typography = MomoTypography,
+        shapes = MomoShapes,
+        content = content
+
+    )
+}
+
 @Preview(showBackground = true)
 @Composable
 fun MomoCalcPreview() {
@@ -186,7 +203,22 @@ fun MomoCalcPreview() {
     }
 }
 
+@Preview(name = "Light Mode", showBackground = true)
+@Composable
+fun PreviewLight(){
+    MoMoAppTheme(darkTheme = false){
+        MomoCalcScreen()
 
+    }
+}
+
+@Preview()
+@Composable
+fun PreviewDark() {
+    MoMoAppTheme(darkTheme = true){
+        MomoCalcScreen()
+    }
+}
 
 
 
