@@ -82,9 +82,10 @@ fun InternalStateInput(){
 fun HoistedAmountInput(
     amount: String,
     onAmountChange: (String) -> Unit,
-    isError: Boolean = false
+    isError: Boolean = false,
+    modifier: Modifier = Modifier
 ){
-    Column {
+    Column(modifier = modifier) {
         TextField(
             value = amount,
             onValueChange = onAmountChange,
