@@ -105,25 +105,35 @@ fun MomoCalcScreen() {
     val fee = (numericAmount ?: 0.0) * 0.03
     val formattedFee = "UGX %,.0f".format(fee)
 
-    Text(
-        text = stringResource(R.string.app_title),
-        style = MaterialTheme.typography.headlineMedium
-    )
+    Column {
+        Text(
+            text = stringResource(R.string.app_title),
+            style = MaterialTheme.typography.headlineMedium
+        )
 
-    Spacer(modifier = Modifier.height(16.dp))
+        Spacer(modifier = Modifier.height(16.dp))
 
-    HoistedAmountInput(
-        amount = amountInput,
-        onAmountChange = { amountInput = it },
-        isError = isError
-    )
+        HoistedAmountInput(
+            amount = amountInput,
+            onAmountChange = { amountInput = it },
+            isError = isError
+        )
 
-    Spacer(modifier = Modifier.height(12.dp))
+        Spacer(modifier = Modifier.height(12.dp))
 
-    Text(
-        text = stringResource(R.string.fee_label, formattedFee),
-        style = MaterialTheme.typography.bodyLarge
-    )
+        Text(
+            text = stringResource(R.string.fee_label, formattedFee),
+            style = MaterialTheme.typography.bodyLarge
+        )
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun MomoCalcPreview() {
+    MaterialTheme{
+        MomoCalcScreen()
+    }
 }
 
 
