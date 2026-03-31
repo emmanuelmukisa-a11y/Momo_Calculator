@@ -114,7 +114,7 @@ fun HoistedAmountInput(
 }
 
 @Composable
-fun MomoCalcScreen() {
+fun MomoCalcScreen(modifier: Modifier = Modifier) {
     var amountInput by remember { mutableStateOf("")}
 
     val numericAmount = amountInput.toDoubleOrNull()
