@@ -39,7 +39,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            MaterialTheme(typography = MomoTypography) {
+            MoMoAppTheme  {
                 Surface(modifier = Modifier.fillMaxSize()) {
                     Scaffold(topBar = { MoMoTopBar() }) {
                         innerPadding ->
