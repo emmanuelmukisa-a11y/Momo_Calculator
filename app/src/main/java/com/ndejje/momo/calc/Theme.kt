@@ -1,6 +1,7 @@
 package com.ndejje.momo.calc
 
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 
@@ -13,6 +14,19 @@ private val LightColorScheme = lightColorScheme(
     onBackground= DarkSurface,
     surface = White,
     onSurface = DarkSurface,
+    error = ErrorRed,
+    onError = OnErrorWhite
+)
+
+private val DarkColorScheme = darkColorScheme(
+    primary = BrandGold,
+    onPrimary = NavyBlueDark,
+    secondary = NavyBlue,
+    onSecondary= White,
+    background = DarkBackground,
+    onBackground = OnDarkText,
+    surface = DarkSurface,
+    onSurface = OnDarkText,
     error = ErrorRed,
     onError = OnErrorWhite
 )
