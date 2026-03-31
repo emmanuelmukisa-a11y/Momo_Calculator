@@ -105,7 +105,7 @@ fun MomoCalcScreen() {
     val fee = (numericAmount ?: 0.0) * 0.03
     val formattedFee = "UGX %,.0f".format(fee)
 
-    Column {
+    Column(modifier = Modifier.padding(16.dp)) {
         Text(
             text = stringResource(R.string.app_title),
             style = MaterialTheme.typography.headlineMedium
